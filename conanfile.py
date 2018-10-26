@@ -49,7 +49,7 @@ class GlibcVersionHeaderConan(ConanFile):
     _commit_id = "dd030738014620a1a0a0a49b58808914e79408ae"
 
     @property
-    def header_name(self):
+    def _header_name(self):
         return "force_link_glibc_%s.h" % self.options.glibc_version
 
     def source(self):
@@ -58,9 +58,9 @@ class GlibcVersionHeaderConan(ConanFile):
 
     def package(self):
         self.copy(pattern="LICENSE.TXT", dst="licenses", src=self._source_subfolder)
-        self.copy(pattern=self.header_name, dst="version_headers", src=os.path.join(self._source_subfolder, "version_headers"))
+        self.copy(pattern=self._header_name, dst="version_headers", src=os.path.join(self._source_subfolder, "version_headers"))
 
     def package_info(self):
-        header_path = os.path.join(self.package_folder, "version_headers", self.header_name)
+        header_path = os.path.join(self.package_folder, "version_headers", self._header_name)
         self.cpp_info.cflags = ["-include %s" % header_path, "-static-libgcc"]
         self.cpp_info.cppflags = ["-include %s" % header_path, "-static-libgcc", "-static-libstdc++"]
