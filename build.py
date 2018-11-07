@@ -3,6 +3,7 @@
 
 
 from bincrafters import build_template_header_only
+import os
 
 if __name__ == "__main__":
 
