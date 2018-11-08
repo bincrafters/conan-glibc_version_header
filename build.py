@@ -3,6 +3,7 @@
 
 
 from bincrafters import build_template_header_only
+from bincrafters import build_shared
 import os
 
 if __name__ == "__main__":
