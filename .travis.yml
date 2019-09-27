@@ -1,8 +1,8 @@
 linux: &linux
    os: linux
-   sudo: required
+   dist: xenial
    language: python
-   python: "3.6"
+   python: "3.7"
    services:
      - docker
 osx: &osx
@@ -11,9 +11,17 @@ osx: &osx
 matrix:
    include:
       - <<: *linux
-        env: CONAN_GCC_VERSIONS=7 CONAN_DOCKER_IMAGE=lasote/conangcc7-i386 ARCH=x86
+        env: CONAN_GCC_VERSIONS=7 CONAN_DOCKER_IMAGE=conanio/gcc7-i386 ARCH=x86
       - <<: *linux
-        env: CONAN_GCC_VERSIONS=7 CONAN_DOCKER_IMAGE=lasote/conangcc7 ARCH=x86_64
+        env: CONAN_GCC_VERSIONS=7 CONAN_DOCKER_IMAGE=conanio/gcc7 ARCH=x86_64
+      - <<: *linux
+        env: CONAN_GCC_VERSIONS=8 CONAN_DOCKER_IMAGE=conanio/gcc8-i386 ARCH=x86
+      - <<: *linux
+        env: CONAN_GCC_VERSIONS=8 CONAN_DOCKER_IMAGE=conanio/gcc8 ARCH=x86_64
+      - <<: *linux
+        env: CONAN_GCC_VERSIONS=9 CONAN_DOCKER_IMAGE=conanio/gcc9-i386 ARCH=x86
+      - <<: *linux
+        env: CONAN_GCC_VERSIONS=9 CONAN_DOCKER_IMAGE=conanio/gcc9 ARCH=x86_64
 
 install:
   - chmod +x .ci/install.sh

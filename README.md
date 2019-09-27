@@ -1,5 +1,5 @@
 [![Download](https://api.bintray.com/packages/bincrafters/public-conan/glibc_version_header%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/glibc_version_header%3Abincrafters/_latestVersion)
-[![Build Status](https://travis-ci.org/bincrafters/conan-glibc_version_header.svg?branch=testing%2F0.1)](https://travis-ci.org/bincrafters/conan-glibc_version_header)
+[![Build Status](https://travis-ci.com/bincrafters/conan-glibc_version_header.svg?branch=testing%2F0.1)](https://travis-ci.com/bincrafters/conan-glibc_version_header)
 
 [Conan.io](https://conan.io) package recipe for [*glibc_version_header*](https://github.com/wheybags/glibc_version_header).
 

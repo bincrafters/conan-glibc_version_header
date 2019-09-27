@@ -65,4 +65,4 @@ class GlibcVersionHeaderConan(ConanFile):
         arch = "x86" if self.settings.arch_build == "x86" else "x64"
         header_path = os.path.join(self.package_folder, "version_headers", arch, self._header_name)
         self.cpp_info.cflags = ["-include %s" % header_path, "-static-libgcc"]
-        self.cpp_info.cppflags = ["-include %s" % header_path, "-static-libgcc", "-static-libstdc++"]
+        self.cpp_info.cxxflags = ["-include %s" % header_path, "-static-libgcc", "-static-libstdc++"]
