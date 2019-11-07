@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import os
 from conans import ConanFile, tools
 
@@ -11,7 +8,6 @@ class GlibcVersionHeaderConan(ConanFile):
     description = "Build portable Linux binaries without using an ancient distro"
     url = "https://github.com/bincrafters/conan-glibc_version_header"
     homepage = "https://github.com/SSE4/glibc_version_header"
-    author = "Bincrafters <bincrafters@gmail.com>"
     license = "MIT"
     exports = ["LICENSE.md"]
     settings = {"os_build": ["Linux"], "arch_build": ["x86", "x86_64"]}
