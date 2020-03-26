@@ -8,7 +8,7 @@ import os
 
 if __name__ == "__main__":
 
-    arch = os.environ["ARCH"]
+    arch = os.getenv("ARCH", "x86_64")
     builder = build_template_header_only.get_builder()
     for version in ["2.10.2", "2.11.3", "2.12.2", "2.13", "2.14", "2.14.1", "2.15",
                     "2.16", "2.17", "2.18", "2.19", "2.20", "2.21", "2.22", "2.23", "2.24",
