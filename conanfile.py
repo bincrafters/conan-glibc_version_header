@@ -9,7 +9,6 @@ class GlibcVersionHeaderConan(ConanFile):
     url = "https://github.com/bincrafters/conan-glibc_version_header"
     homepage = "https://github.com/SSE4/glibc_version_header"
     license = "MIT"
-    exports = ["LICENSE.md"]
     settings = {"os_build": ["Linux"], "arch_build": ["x86", "x86_64"]}
     options = {"glibc_version": [
         "2.10.2",
